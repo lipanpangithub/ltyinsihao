@@ -1,0 +1,117 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin: 0; padding: 0; }
+fieldset, img { border: none; }
+ul, ol, li { list-style: none; }
+body { color: #333; font: 12px/20px "Microsoft Yahei","Arial Narrow",HELVETICA; }
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+input{
+    border:none;
+    outline: none;
+}
+/*animat*/
+.animated {
+     -webkit-animation-duration:0.5s;
+     animation-duration:0.5s;
+     -webkit-animation-fill-mode:both;
+     animation-fill-mode:both
+ }
+.animated.infinite {
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite
+}
+.animated.hinge {
+    -webkit-animation-duration:0.5s;
+    animation-duration:0.5s
+}
+@keyframes zoomIn {
+     0% {
+         opacity:0;
+         -webkit-transform:scale3d(.3,.3,.3);
+         -ms-transform:scale3d(.3,.3,.3);
+         transform:scale3d(.3,.3,.3)
+     }
+     50% {
+         opacity:1
+     }
+ }
+.zoomIn {
+      -webkit-animation-name:zoomIn;
+      animation-name:zoomIn
+  }
+.overlay_prompt{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+#promptBox{
+    width: 230px;
+    height: 195px;
+    border-radius: 2px;
+    margin:auto;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.dialogHeader{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: 1px solid #edeeee;
+    background: #f8f8f8;
+}
+.tipClass{
+
+}
+.dialogContianer{
+    height: 70px;
+    padding:45px 12px 0 60px;
+    text-align: center;
+    background-size: 40px 40px !important;
+}
+.aTip{
+    background: url("../img/tip.gif") no-repeat 25px center;
+}
+.aWarn{
+    background: url("../img/warn.gif") no-repeat 25px center;
+}
+.aError{
+    background: url("../img/error.gif") no-repeat 25px center;
+}
+.close_btn{
+    display: block;
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin: 7px 5px;
+    background: url("../img/close.png") no-repeat center;
+    cursor: pointer;
+}
+.dialogFooter{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom:0;
+}
+.sec{
+    margin: 15px 0 0 40px;
+}
+.btn-xs{width:60px;height:30px;border-radius: 3px}
+.btnY {background:#2d8ded;color:#fff}
+.btnN {background:#f0f1f1;;margin-left: 10px}

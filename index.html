@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="js/layer/css/layer-base.css"/>
+    <link rel="stylesheet" href="js/prompt/css/base.css"/>
+    <script src="js/jquery-1.10.0.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="logo left"><img src="img/ltlogo.png" alt=""/></div>
+        <div class="user"><img src="img/user.png" alt=""/><span>13488888888</span></div>
+    </div>
+    <div class="container clearboth">
+        <!--menu-->
+        <div class="lfMenu left">
+            <ul class="menulist">
+                <li>
+                    <div class="menu-item">
+                        <span class="menu_icon order_icon"></span>
+                        <span class="left">办理</span>
+                        <i class=""></i>
+                    </div>
+                    <ul class="submenu">
+                        <li><a id="chosenum" href="#/index">选号</a></li>
+                        <li><a id="open" href="#/openAccount">开户</a></li>
+                    </ul>
+                </li>
+                <!--<li>
+                    <div class="menu-item">
+                        <span class="menu_icon recharge_icon"></span>
+                        <span class="left"><a href="#/recharge">充值</a></span>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+        <div class="rgContaier left">
+            <div class="nContiner b_ra5">
+                <!--choose number-->
+                <div id="index-page" class="content">
+                    <div class="switch_address relative">
+                        <div class="address" id="select_address">
+                            <input type="hidden" id="provice_mess" provice_name="" provice_code="" value=""/>
+                            <input type="hidden" id="city_mess" city_name="" city_code="" value=""/>
+                            <span class="provcont">请选择归属地</span>
+                            <span class="citycont"></span>
+                        </div>
+                        <div class="address_list">
+                            <ul class="province">
+
+                            </ul>
+                        </div>
+                        <div class="citybox">
+                            <ul class="city">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="noAddress">
+                        <span>请先选择归属地！</span>
+                    </div>
+                    <div class="hasAddress">
+                        <div class="checkAll" id="checkAll"><input type="checkbox" name ="checkAll"/>本页全选</div>
+                        <div class="number_list">
+                            <ul id="pagenum_cont">
+
+                            </ul>
+                        </div>
+                        <div class="pagecont">
+                            <div class="pagebtn">
+                                <span data-page="0" class="pageNum numactive">1</span>
+                                <span data-page="1" class="pageNum">2</span>
+                                <span data-page="2" class="pageNum">3</span>
+                                <span data-page="3" class="pageNum">4</span>
+                            </div>
+                        </div>
+                        <div class="chosebtn">
+                            <a class="b_ra3" id="nextstep" href="#/openAccount">选好了,下一步</a>
+                            <div class="chosetip">已选 <span class="amount">0</span> 号码，点击<span class="handlebtn" id="see_number"> 查看 </span>已选号码</div>
+                        </div>
+                    </div>
+                </div>
+                <!--open account-->
+                <div id="openAccount-page" class="content">
+                    <div class="openAccount">
+                        <div class="recont">
+                            <a href="#/index" class="btngroup">< 返回上一步</a>
+                        </div>
+                        <div class="tabContainer">
+                            <div class="tabcont">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>序号</th>
+                                        <th>订单编号</th>
+                                        <th>下单时间</th>
+                                        <th>已购号码</th>
+                                        <th>归属地</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="handlebtn">取消选号</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="account_tip wait_account">等待开户</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="account_tip suc_account">开户成功</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td><span class="account_tip err_account">开户失败</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="batch">
+                            <input type="button" value="批量开户" id="batchopen" class="btngroup"/>
+                            <div class="opentip">
+                                <ul>
+                                    <li>开户成功号码 <i>10</i> 个 ,</li>
+                                    <li>开户失败号码 <i>10</i> 个 <a href="#/details" class="handlebtn">查看详情</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodata">暂无数据，请先进行选号</div>
+                </div>
+                <!--recharge-->
+                <div id="recharge-page" class="content">
+                    <h1>这是充值页面</h1>
+                    <a href="#/index">back</a>
+                </div>
+                <!--details-->
+                <div id="details-page" class="content">
+                    <div class="details_container">
+                        <div class="dtitle">开户成功导出（xxx个）</div>
+                        <div class="fliter_condition">
+                            <ul>
+                                <li>开户时间：
+                                    <select name="" id="">
+                                        <option value="">全部</option>
+                                    </select>
+                                </li>
+                                <li>省：
+                                    <select name="" id="">
+                                        <option value="">全部</option>
+                                    </select>
+                                </li>
+                                <li>市：
+                                    <select name="" id="">
+                                        <option value="">全部</option>
+                                    </select>
+                                </li>
+                                <li><input type="button" id="" class="exportbtn btngroup" value="导出"/></li>
+                                <li><span class="warntip">*仅支持导出开户成功号码</span></li>
+                            </ul>
+                        </div>
+                        <div class="dtitle">开户失败处理（xxx个）</div>
+                        <div class="tabContainer">
+                            <div class="tabcont">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>序号</th>
+                                        <th>订单编号</th>
+                                        <th>下单时间</th>
+                                        <th>手机号码</th>
+                                        <th>归属地</th>
+                                        <th>订单状态</th>
+                                        <th>失败原因</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"/></td>
+                                        <td>1</td>
+                                        <td>1937196387546</td>
+                                        <td>2018-11-06  12:00:00</td>
+                                        <td>18667576577</td>
+                                        <td>北京</td>
+                                        <td>开户失败</td>
+                                        <td>开户失败</td>
+                                        <td>
+                                            <span class="handlebtn">重新开户</span>
+                                            <span class="handlebtn">释放号码</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="pagecont">
+                            <div class="batch">
+                                <input type="button" value="批量重新开户"  class="btngroup">
+                                <div class="pagebtn">
+                                    <span data-page="0" class="pageNum numactive">1</span>
+                                    <span data-page="1" class="pageNum">2</span>
+                                    <span data-page="2" class="pageNum">3</span>
+                                    <span data-page="3" class="pageNum">4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>Copyright © www.ChinaUnicom.cn, All Rights Reserved.</div>
+        <div>Email : 5698401@qq.com  QQ: 5698401</div>
+    </div>
+    <!--loading-->
+    <div class="loading"></div>
+    <script src="js/router.js"></script>
+    <script src="js/prompt/js/prompt.js"></script>
+    <script src="js/layer/js/layer.js"></script>
+    <script src="js/chose_number.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/jquery-1.10.0.min.js"></script>
+</head>
+<body>
+<div class="haschose">
+    <ul id="haschose_num">
+
+    </ul>
+</div>
+<script type="text/javascript">
+    $(function(){
+        //查看已选择号码
+        if(sessionStorage.getItem("numArr")){
+            var numArr = sessionStorage.getItem("numArr").split(",");
+            $.ajax({
+                type:"post",
+                url:"js/package.json",//http://172.27.35.3:8083/queryNumber
+                success:function(data){
+                    $("#haschose_num").empty();
+                    var str = "";
+                    for(var i=0;i<data.length;i++){
+                        for(var x = 0;x<numArr.length;x++){
+                            if(numArr[x] == data[i].index){
+                                str += '<li>'+data[i].number+'</li>';
+                            }
+                        }
+                    }
+                    $("#haschose_num").append(str);
+                }
+            });
+        }
+        //查看选占失败的号码
+        if(sessionStorage.getItem("err_phone")){
+            var errphone = sessionStorage.getItem("err_phone");
+            $("#haschose_num").empty();
+            var str = '';
+            for(var n = 0;n < errphone.length;n++){
+                str += '<li>'+errphone[n]+'</li>';
+            }
+            $("#haschose_num").append(str);
+        }
+    });
+</script>
+</body>
+</html>
